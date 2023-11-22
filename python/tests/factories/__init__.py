@@ -22,7 +22,7 @@ class ProductQuantityFactory(factory.Factory):
         if o.base_product 
         else factory.Sequence(lambda n: f"product-name-{n}")
     )
-    quantity = factory.Faker("pydecimal", right_digits=0, min_value=1, max_value=100)
+    quantity = factory.Faker("pyfloat", right_digits=0, min_value=1, max_value=100)
 
     class Params:
         base_product: Product = None
@@ -54,7 +54,7 @@ class DiscountFactory(factory.Factory):
         else factory.Sequence(lambda n: f"product-name-{n}")
     )
     description = factory.Sequence(lambda n: f"description-{n}")
-    discount_amount = factory.Faker("pydecimal", right_digits=2, min_value=0, max_value=100)
+    discount_amount = factory.Faker("pyfloat", right_digits=2, min_value=0, max_value=100)
 
     class Params:
         base_product: Product = None
