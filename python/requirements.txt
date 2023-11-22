@@ -1,4 +1,5 @@
 approvaltests
 python-dateutil
 pytest-approvaltests
+factory-boy
 
